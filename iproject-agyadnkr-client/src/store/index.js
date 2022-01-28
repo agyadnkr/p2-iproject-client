@@ -98,6 +98,12 @@ export default new Vuex.Store({
           commit('SET_EXISTINGPLACE', {});
           router.push({ name: 'Home' })
 
+          Swal.fire({
+            icon: "success",
+            title: "Yeayy..",
+            text: "You have add a marker!!",
+          });
+
         }
       } catch (error) {
         Swal.fire({
@@ -180,6 +186,11 @@ export default new Vuex.Store({
         commit('SET_ISLOGGED', true)
 
         router.push({ name: 'Home' });
+        Swal.fire({
+          icon: "success",
+          title: "Yeayy..",
+          text: "You have login, enjoy!",
+        });
 
       } catch (error) {
         Swal.fire({
@@ -224,6 +235,11 @@ export default new Vuex.Store({
         })
 
         router.push({ name: 'Login' })
+        Swal.fire({
+          icon: "success",
+          title: "Yeayy..",
+          text: "Register success!!",
+        });
       } catch (error) {
         Swal.fire({
           icon: 'error',
